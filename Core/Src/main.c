@@ -168,8 +168,8 @@ void force_temp_conv (void)
 
 float TEMP;
 
-char rtc_buffer1[16];
-char rtc_buffer2[18];
+char rtc_buffer1[19];
+char rtc_buffer2[19];
 
 
 
@@ -218,7 +218,8 @@ start_time = HAL_GetTick();
 
 
 uint8_t Button_Pressed_Flag=0;
-uint16_t start,stop;
+uint16_t start = 0;
+uint16_t stop  = 0;
 	while(1){
 
 		if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0)==0)
